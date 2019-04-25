@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ekin.restsharp.wrapper", "e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ekin.restsharp.wrapper.unittests", "ekin.restsharp.wrapper.unittests\ekin.restsharp.wrapper.unittests.csproj", "{82D969DC-8121-47CD-A167-DD460A15F54D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{1ACAD936-D8A1-4B7D-BA31-E5904ABDE33D}"
+	ProjectSection(SolutionItems) = preProject
+		ekin.restsharp.wrapper.nuspec = ekin.restsharp.wrapper.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/ekinbulut/ekin.restsharp.wrapper.git</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>A wrapper for RestSharp</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>A wrapper for RestSharp</tags>
+  </metadata>
+</package>
