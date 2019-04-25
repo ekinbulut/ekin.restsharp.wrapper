@@ -3,7 +3,7 @@ using RestSharp;
 
 namespace ekin.restsharp.wrapper
 {
-    public class RestSharpProxy
+    public class RestSharpProxy : IRestSharpProxy
     {
         private readonly IRestClient _restClient;
         private readonly IRestRequest _request;
@@ -14,8 +14,18 @@ namespace ekin.restsharp.wrapper
             _request = new RestRequest();
         }
 
+        public RestSharpProxy(IRestClient restClient)
+        {
+            _restClient = restClient;
+            _request = new RestRequest();
+
+        }
+
         public TResponse Execute<TRequest, TResponse>(RestSharpProxyRequest<TRequest> restSharpProxyRequest) where TResponse : class, new()
         {
+            if (string.IsNullOrEmpty(restSharpProxyRequest.Url))
+                throw new ArgumentNullException("restSharpProxyRequest.Url is empty");
+
             _restClient.BaseUrl = new Uri(restSharpProxyRequest.Url);
 
             if (!string.IsNullOrEmpty(restSharpProxyRequest.Resource))
